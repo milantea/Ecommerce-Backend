@@ -1,2 +1,1 @@
-# Ecommerce-Backend
-A backend application for ecommerce
+# E-commerce Back End Starter Code
