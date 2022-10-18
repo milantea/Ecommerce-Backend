@@ -37,14 +37,12 @@ router.get("/:id", async (req, res) => {
 router.post("/", (req, res) => {
   // create a new tag
   Tag.create({
-    tag_name: req.body.tag_name,
-  })
-    .then((newTag) => {
-      res.json(newTag);
-    })
-    .catch((err) => {
-      res.json(err);
-    });
+    where: {
+      tag_name: req.params.tag_name,
+    },
+  }).then(() => {
+    res.json("New tag added!");
+  });
 });
 
 router.put("/:id", async (req, res) => {
